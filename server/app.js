@@ -3,7 +3,7 @@ const express = require("express");
 
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const path = require("path");   // ← AGREGADO
+const path = require("path");   
 
 const app = express();
 app.use(cors());
@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // SERVIR LA CARPETA CLIENT  ← AGREGADO
 // -------------------------------
 app.use(express.static(path.join(__dirname, "..", "client")));
-// Ahora podés abrir http://127.0.0.1:3000/cliente.html
+
 // -------------------------------
 
 
@@ -203,6 +203,6 @@ app.post("/api/add", ensureAuth, async (req, res) => {
 // INICIAR SERVIDOR
 // ===============================
 app.listen(PORT, () => {
-  console.log("Servidor corriendo en https://jukebox-qblp.onrender.com:" + PORT);
+  console.log("Servidor corriendo en https://otro-tema-free.onrender.com:" + PORT);
 });
 
