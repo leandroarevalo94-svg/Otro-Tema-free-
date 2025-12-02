@@ -10,7 +10,7 @@ async function buscarCanciones() {
   resultados.innerHTML = `<p class="text-gray-400 text-sm">Buscando...</p>`;
 
   try {
-    const resp = await fetch(`https://jukebox-qblp.onrender.com/api/search?q=${encodeURIComponent(q)}`);
+    const resp = await fetch(`https://otro-tema-free.onrender.com/api/search?q=${encodeURIComponent(q)}`);
     const data = await resp.json();
 
     if (!resp.ok) {
@@ -63,7 +63,7 @@ function mostrarResultados(tracks) {
 
 // ---- AGREGAR TEMA A LA COLA ----
 async function agregarTema(uri) {
-  const resp = await fetch("https://jukebox-qblp.onrender.com/api/add", {
+  const resp = await fetch("https://otro-tema-free.onrender.com/callback", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
