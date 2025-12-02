@@ -63,7 +63,7 @@ function mostrarResultados(tracks) {
 
 // ---- AGREGAR TEMA A LA COLA ----
 async function agregarTema(uri) {
-  const resp = await fetch("https://otro-tema-free.onrender.com", {
+  const resp = await fetch("https://otro-tema-free.onrender.com/api/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
