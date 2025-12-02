@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Otro Tema — Pedí tu canción</title>
+
+  <!-- Tailwind CDN (rápido para prototipo) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-start justify-center p-4">
+
+  <main class="w-full max-w-md">
+    <header class="mb-6 text-center">
+      <h1 class="text-3xl font-bold">🎵 OTRO TEMA 🎵</h1>
+      <p class="text-sm text-gray-300">Escaneaste el QR de: <strong id="bar-name">⚓BARLOVENTO⚓</strong></p>
+    </header>
+
+    <section class="bg-gray-800 rounded-lg p-4 shadow">
+      <label class="block text-sm text-gray-300 mb-2">Buscar canción</label>
+
+      <div class="flex gap-2">
+        <input id="searchInput" type="text" placeholder="Ej: Los Pibes Chorros — Sentimiento Villero"
+               class="flex-1 p-2 rounded bg-gray-700 text-white outline-none" />
+        <button id="btnSearch" class="px-4 py-2 rounded bg-blue-600 hover:bg-blue-500">Buscar</button>
+      </div>
+
+      <div id="resultados" class="mt-4 space-y-2"></div>
+    </section>
+
+    <section class="mt-4 text-center text-sm text-gray-400">
+      <div id="msg-info"><strong>Pedí tu tema🍺</strong>.</div>
+    </section>
+  </main>
+
+  <script src="cliente.js"></script>
+</body>
+</html>
